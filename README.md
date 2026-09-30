@@ -32,6 +32,21 @@ React (src/)  --invoke-->  Rust 外壳 (src-tauri/src/lib.rs)  --std::process-->
 
 ---
 
+## 1.1 下载安装包
+
+不想自己编译的话，直接取最新发布：
+
+**[→ 下载最新 Release](../../releases/latest)**
+
+| 文件 | 说明 |
+|---|---|
+| `MTK-Porttool-Studio-<版本>-portable-x64.zip` | **免安装绿色版**（推荐）：解压后运行 `mtk-porttool-studio.exe` |
+| `MTK-Porttool-Studio-<版本>-x64-setup.exe` | NSIS 安装包 |
+
+两个包都已内含后端工具，无需另外下载。**运行要求**：Windows 10/11 x64（依赖 WebView2）+ **Python 3.10+** 且 `python` 在 PATH 中（后端为纯标准库，不需要 pip 安装依赖）。
+
+---
+
 ## 2. 相对 tkinter 原版的界面重构
 
 原版是「左侧窄配置栏 + 右侧日志框」的单窗口布局，本版按 MD3 的信息层级重做：
