@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "MTK Porttool Studio",
+  "version": "1.0.0",
+  "identifier": "com.mtkporttool.studio",
+  "build": {
+    "beforeDevCommand": "node ./node_modules/vite/bin/vite.js",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "node ./node_modules/typescript/bin/tsc -b && node ./node_modules/vite/bin/vite.js build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "MTK 移植工作室",
+        "width": 1280,
+        "height": 820,
+        "minWidth": 1040,
+        "minHeight": 680,
+        "center": true,
+        "resizable": true,
+        "backgroundColor": "#FBF9FA"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": ["icons/icon.ico", "icons/icon.png"],
+    "resources": ["../tools"],
+    "shortDescription": "MTK 低端机 ROM 移植工具",
+    "longDescription": "MTK 低端机 ROM 移植工具的 Material Design 3 桌面外壳：移植、LK 去警告、文件系统自查，主色跟随桌面壁纸。",
+    "windows": {
+      "nsis": {
+        "displayLanguageSelector": false,
+        "languages": ["SimpChinese", "English"],
+        "installerIcon": "icons/icon.ico",
+        "installMode": "both"
+      }
+    }
+  }
+}

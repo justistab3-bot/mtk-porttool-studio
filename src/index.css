@@ -1,0 +1,85 @@
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 桌面应用语义：整体禁止文本选择，仅日志与输入框放开 */
+body {
+  user-select: none;
+}
+
+input,
+textarea,
+.log-surface,
+.log-surface * {
+  user-select: text;
+}
+
+/* 纤细滚动条，符合 MD3 的克制观感 */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 140, 0.32);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 140, 0.55);
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 日志行：等宽、紧凑、可选中 */
+.log-line {
+  font-family: "JetBrains Mono", "Cascadia Mono", Consolas, "Microsoft YaHei Mono", monospace;
+  font-size: 12px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-all;
+  padding: 0.5px 0;
+}
+
+.log-line:hover {
+  background: rgba(128, 128, 140, 0.1);
+}
+
+@keyframes md3-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.md3-enter {
+  animation: md3-fade-in 180ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

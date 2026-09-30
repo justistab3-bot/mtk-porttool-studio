@@ -1,0 +1,21 @@
+--- a/porttool/utils.py
++++ b/porttool/utils.py
+@@ -1694,13 +1694,13 @@
+             if self.source_type == 'zip':
+                 print(f"  └─ 移植包：{self.port_source}（{_fmt_size(Path(self.port_source).stat().st_size)}）", file=self.std)
+             else:
+                 pb, ps = self.port_source
+-            print(f"  ├─ 移植用 boot：{pb}（{_fmt_size(Path(pb).stat().st_size)}）", file=self.std)
+-            if ps:
+-                print(f"  └─ 移植用 system：{ps}（{_fmt_size(Path(ps).stat().st_size)}）", file=self.std)
+-            else:
+-                print(f"  └─ 移植用 system：不参与（本方案无需 system）", file=self.std)
++                print(f"  ├─ 移植用 boot：{pb}（{_fmt_size(Path(pb).stat().st_size)}）", file=self.std)
++                if ps:
++                    print(f"  └─ 移植用 system：{ps}（{_fmt_size(Path(ps).stat().st_size)}）", file=self.std)
++                else:
++                    print(f"  └─ 移植用 system：不参与（本方案无需 system）", file=self.std)
+         
+         # kernel-only / recovery-only + zip 输出二次拦截：UI 已拦截，此处防绕过 UI 直接调用
+         if self._flag('kernel_only_mode') and not self.genimg:
+             print(f"【移植失败】kernel-only（仅替换内核）仅支持 img 输出，请将输出类型切换为 img", file=self.std)

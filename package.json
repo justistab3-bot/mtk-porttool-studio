@@ -1,0 +1,40 @@
+{
+  "name": "mtk-porttool-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MTK 低端机 ROM 移植工具 —— Material Design 3 桌面外壳 (Tauri 2 + React 19)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "typecheck": "tsc -b",
+    "check:contract": "node scripts/cli_contract_check.mjs",
+    "check:dom": "node scripts/dom_check.mjs",
+    "check:rust": "cargo test --manifest-path src-tauri/Cargo.toml --lib"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fontsource-variable/noto-sans-sc": "^5.2.5",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
+    "@tauri-apps/api": "^2.7.0",
+    "@tauri-apps/plugin-dialog": "^2.3.0",
+    "@tauri-apps/plugin-opener": "^2.4.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.7.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.0"
+  }
+}

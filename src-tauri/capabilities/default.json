@@ -1,0 +1,14 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "MTK 移植工作室默认权限：文件/目录选择、外部打开器，以及外壳自定义命令。",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "dialog:default",
+    "dialog:allow-open",
+    "opener:default",
+    "opener:allow-open-path",
+    "opener:allow-open-url"
+  ]
+}

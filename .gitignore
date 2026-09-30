@@ -1,0 +1,24 @@
+node_modules
+dist
+dist-ssr
+*.local
+.vite
+*.tsbuildinfo
+
+# 开发辅助脚本的验证产物（截图等）
+.shots
+
+# Rust / Tauri
+src-tauri/target
+src-tauri/gen
+
+# 后端工具运行时目录（移植产物、缓存、临时文件）
+tools/mtk-garbage-porttool-master/out
+tools/mtk-garbage-porttool-master/base
+tools/mtk-garbage-porttool-master/tmp
+
+# 编辑器
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store

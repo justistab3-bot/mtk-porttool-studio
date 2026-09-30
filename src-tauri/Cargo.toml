@@ -1,0 +1,29 @@
+[package]
+name = "mtk-porttool-studio"
+version = "1.0.0"
+description = "MTK 低端机 ROM 移植工具 —— Material Design 3 桌面外壳"
+authors = ["Little Code Sauce"]
+edition = "2021"
+
+[lib]
+name = "mtk_porttool_studio_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+encoding_rs = "0.8"
+# 壁纸取色需要解码图片；只启用 JPEG/PNG/WebP，避免拉入全部编解码器
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true
