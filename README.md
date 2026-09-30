@@ -3,6 +3,10 @@
 > 为 [mtk-garbage-porttool-master](https://github.com/LJY-33684/mtk-garbage-porttool-master) 重构的 **Material Design 3** 桌面外壳。
 > Tauri 2 + React 19 + MUI 7（Material You），后端逻辑通过既有 CLI 桥接接口调用。
 
+![界面总览](docs/screenshots/overview.jpg)
+
+*主色跟随桌面壁纸自动生成；左侧导航、中部工作区、右侧常驻任务日志。*
+
 ---
 
 ## 1. 设计原则
