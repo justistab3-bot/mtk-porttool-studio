@@ -202,4 +202,11 @@ pnpm check:dom                                   # 浏览器渲染校验（需�
 - Recovery 移植参考 [@Xxinn034](https://github.com/Xxinn034/mtk-legacy-porttool)；LK 去警告整合自 [@justistab3-bot](https://github.com/justistab3-bot/mtk-lk-warning-patch)
 - 技术栈与交互范式参考 [xinjiu-qwq/cloudtune](https://github.com/xinjiu-qwq/cloudtune)（Tauri 2 + Material Design 3）
 
-本仓库仅重构界面外壳，后端工具及其许可条款遵循上游仓库。
+### 许可证 / License
+
+本项目遵循 **GNU General Public License v3.0**（见 [LICENSE](LICENSE)）。
+
+原因：本仓库分发并修改了上游后端工具 `mtk-garbage-porttool-master`（其许可证为 GPL-3.0），
+因此整个衍生作品（含本 UI 外壳与打包产物）同受 GPL-3.0 约束。
+
+> 本仓库是**非官方**界面重构，与上游作者无隶属关系；后端工具版权归其原作者所有。
